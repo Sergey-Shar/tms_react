@@ -1,16 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Text from './components/Text'
+import Square from './components/Boxes'
 
 
 
 ReactDOM.render(
   <React.StrictMode>
-    <Text text="Regular text" align="center" fontSize={1.5} />
-    <Text text="Huge header" align="center" fontSize={2.5} />
-    <Text text="Danger notification" align="center" fontSize={1.5} color="red" />
-    <Text text="Underline text" align="center" fontSize={2} underLine />
+    <Square cssClass = 'small-square' label = 'BIG square'/>
+    <Square cssClass = 'middle-square' label = 'A less square'/>
+    <Square cssClass = 'large-square' label = 'The smallest square'/>
   </React.StrictMode>,
   document.getElementById('root')
 );
