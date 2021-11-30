@@ -1,0 +1,45 @@
+.square-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem 0 1rem 0;
+}
+
+.small-square {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    height: 18rem;
+    width: 18rem;
+    font-size: 3rem;
+    background-color: #ffff;
+    box-shadow: 10px 10px 10px 2px rgba(34, 60, 80, 0.2);
+}
+
+.middle-square {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    height: 14rem;
+    width: 14rem;
+    font-size: 1.5rem;
+    background-color: #0000FF;
+    color: #ffff;
+    box-shadow: 10px 10px 10px 2px rgba(34, 60, 80, 0.2);
+
+}
+
+.large-square {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    height: 11rem;
+    width: 11rem;
+    font-size: 0.8rem;
+    background-color: #ffff;
+    box-shadow: 10px 10px 10px 2px rgba(34, 60, 80, 0.2);
+}
+
+h3 {
+    width: 100%;
+}
