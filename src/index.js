@@ -4,7 +4,6 @@ import './index.css';
 import CreateCheckbox from './components/Checkbox'
 
 
-
 ReactDOM.render(
   <React.StrictMode>
     <CreateCheckbox/>
