@@ -1,13 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import CyclycBtn from './components/CyclicButton'
-
+import CreateCheckbox from './components/Checkbox'
 
 
 ReactDOM.render(
   <React.StrictMode>
-  <CyclycBtn/>
+    <CreateCheckbox/>
   </React.StrictMode>,
   document.getElementById('root')
 );
