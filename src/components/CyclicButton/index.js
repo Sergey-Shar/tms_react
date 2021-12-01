@@ -17,7 +17,7 @@ const CyclycBtn = () => {
         textAlign: 'center',
         cursor: "pointer"
     }
-    return <div onClick={onClickBtn} style={{ ...styles }}  >{iconBtn}</div>
+    return <div onClick={onClickBtn} style={{...styles}}  >{iconBtn}</div>
 }
 
 export default CyclycBtn
