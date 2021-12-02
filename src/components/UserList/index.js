@@ -1,9 +1,10 @@
-import data from './data.json'
+import data from './data.json';
+import './index.css';
 
 const UsersList = () => {
     return data.map(item => {
         return (
-            <div key={item._id} style={{textAlign:'center',border:'solid 1px',margin:'10px auto', width: '50%'}} >'
+            <div className='container' key={item._id} >
                 <h3>{item.name.first}</h3>
                 <h4>{item.name.last}</h4>
             </div>
