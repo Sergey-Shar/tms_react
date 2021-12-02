@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Counter from './components/Counter'
+import UsersList from './components/UserList';
 
 ReactDOM.render(
   <React.StrictMode>
-  <Counter/>
+   <UsersList/>
   </React.StrictMode>,
   document.getElementById('root')
 );
