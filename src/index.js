@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import UsersList from './components/UserList';
+import DropDown from './components/DropDown'
 
 ReactDOM.render(
   <React.StrictMode>
-   <UsersList/>
+  <DropDown/>
   </React.StrictMode>,
   document.getElementById('root')
 );

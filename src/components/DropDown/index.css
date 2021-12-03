@@ -1,0 +1,28 @@
+.toggle {
+    position: absolute;
+    right: 45%;
+    top: 40%;
+    cursor: pointer;
+    width: 10rem;
+    height: 2rem;
+    font-size: 1.1rem;
+    padding-right: 6.5rem;
+}
+
+.list {
+    position: absolute;
+    right: 45%;
+    top: 45%;
+    border: solid 1px;
+    width: 9.4rem;
+    list-style-type: none;
+    margin: 10px 0;
+    padding: 0 0 0 0.5rem;
+}
+
+.list li {
+    width: 100%;
+    padding-bottom: 0.3rem;
+
+
+}
