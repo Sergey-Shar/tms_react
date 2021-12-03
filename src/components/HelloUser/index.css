@@ -20,5 +20,8 @@
     color: #E0FFFF;
     border: none;
     border-radius: 0.5rem;
+}
 
+.btn:active{
+    background: #808080;
 }
