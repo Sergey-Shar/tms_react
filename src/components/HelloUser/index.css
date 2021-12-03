@@ -1,0 +1,24 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 30rem;
+}
+
+.greeting {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.btn {
+    font-size: 1.5rem;
+    font-weight: 400;
+    padding: 1rem;
+    cursor: pointer;
+    background-color: #000;
+    color: #E0FFFF;
+    border: none;
+    border-radius: 0.5rem;
+
+}
