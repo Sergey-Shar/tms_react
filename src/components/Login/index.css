@@ -1,0 +1,25 @@
+.page {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    height: 15rem;
+    margin: 10rem auto;
+    border: 0.5px solid rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    box-shadow: 10px 10px 10px 2px rgba(34, 60, 80, 0.2);
+}
+
+input {
+    margin: 1rem;
+    padding-left: 0.5rem;
+    height: 1.2rem;
+    border-radius: 0.4rem none;
+    border: 0.5px solid rgba(0, 0, 0, 0.3);
+
+}
+
+.btn-reset {
+    cursor: pointer;
+}
