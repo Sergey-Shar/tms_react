@@ -18,7 +18,7 @@ const Pagination = () => {
     }
 
     useEffect(() => {
-        getImage()
+         getImage()
     }
         , [pagination])
 
@@ -31,7 +31,7 @@ const Pagination = () => {
                     </div>)
             }) : <span className='loader'></span>
             }
-            {image.length && Button(setPagination)}
+            {image.length && <Button numbers = {setPagination}/>}
         </div>
     )
 }
