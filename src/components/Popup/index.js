@@ -19,7 +19,7 @@ const Popup = ({ className, onClose }) => {
             .then((userCredential) => {
                 const user = userCredential.user
                 onClose()
-                history.push('/post')
+                history.push('/posts')
             })
             .catch((error) => {
                 const errorCode = error.code

@@ -5,9 +5,9 @@ import Popup from "../Popup";
 import { useHistory } from "react-router-dom";
 
 
-const Login = (props) => {
+const Login = () => {
 
-    const [email, setEmail] = useState('')
+    const [mail, setMail] = useState('')
     const [password, setPasword] = useState('')
     const [err, setErr] = useState('')
     const [regestration, setRegestration] = useState(false)
@@ -19,7 +19,7 @@ const Login = (props) => {
         signInWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
                 const user = userCredential.user
-                history.push('/post')
+                history.push('/posts')
             })
             .catch((error) => {
                 const errorCode = error.code
@@ -35,15 +35,14 @@ const Login = (props) => {
         setRegestration(false)
     }
 
-    const onChange = (event) => {
-        const { dataset, value } = event.target
-        if (dataset.input === email) {
-            setEmail(value)
-        }
-        if (dataset.input === password) {
-            setPasword(value)
-        }
-    }
+    // const onChangeEmail = (event) => {
+    //     setMail(event.target.value)
+    //     console.log(event.target.value)
+    //   }
+
+      const onChangePassword = (event) => {
+          setPasword(event.target.value)
+      }
 
     return (
         <>
@@ -55,16 +54,14 @@ const Login = (props) => {
                 </div>
                 <div className="form">
                     <input type='text'
-                        onChange={onChange}
-                        placeholder="Электронный адрес или номер телефона"
-                        data-input="email"
-                        value={email} />
+                     onChange = {(event) => setMail(event.target.value)}
+                     value={mail}
+                     placeholder="Электронный адрес или номер телефона"/>
                     <input type='password'
-                        onChange={onChange}
-                        placeholder="Пароль"
-                        data-input="password"
-                        value={password} />
-                    <button className="btn-log_in" onClick={() => onInLogin(email, password)}>Вход</button>
+                     onChange = {(event)=> setPasword(event.target.value)} 
+                     value={password}
+                     placeholder="Пароль"/>
+                    <button className="btn-log_in" onClick={() => onInLogin(mail, password)}>Вход</button>
                     <p className="password">забыли пароль?</p>
                     <button className="btn-regestration" onClick={openForm}>Создать новый аккаунт</button>
                     <p className="error">{err}</p>

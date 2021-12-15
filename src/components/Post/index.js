@@ -1,53 +1,28 @@
 import React, { useEffect, useState } from "react";
-import  './index.css';
+import { useParams } from "react-router-dom";
 
-const Requests = () => {
+const Post = () => {
 
-    const [posts, setPosts] = useState([])
+    const [post, setPost] = useState({})
+
+    const getPost = async () => {
+        const response = await fetch(`https://jsonplaceholder.typicode.com/posts/${params.postId}`)
+        const data = await response.json()
+        setPost(data)
+    }
 
     useEffect(() => {
         getPost()
     }, [])
-    
-    const postObj = {
-        userId:1,
-        title: "text title",
-        body: "body text",
-    }
 
-    const getPost = async () => {
-        try{
-        const respons = await fetch('https://jsonplaceholder.typicode.com/posts/')
-        const data = await respons.json()
-        setPosts(data)
-        } catch(err){
-            console.error(err)
-        }
-    }
+    const params = useParams()
 
-    const createPost = async () => {
-       await fetch("https://jsonplaceholder.typicode.com/posts",{
-         method: 'POST',
-         body:JSON.stringify(postObj),
-           headers:{
-            'Content-Type': 'application/json'
-        },
-        })
-        getPost()
-    }
     return (
         <div>
-            { (posts.length) ? posts.map(item => {
-                return (
-                    <div key={item.id}>
-                        <h2>{item.title}</h2>
-                        <span>{item.body}</span>
-                    </div>
-                )
-            }) : <div className='loader'></div>}
-            <button onClick={createPost}>Click me HARD!!!!</button>
+            <h1>{post.title}</h1>
+            <p>{post.body}</p>
         </div>
     )
 }
 
-export default Requests
+export default Post
