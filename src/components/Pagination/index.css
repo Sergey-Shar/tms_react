@@ -1,0 +1,59 @@
+body {
+    background-color: #000;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    justify-content: center;
+}
+
+.img {
+    justify-content: center;
+    border-radius: 10%;
+    margin: 1rem;
+}
+
+.loader {
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    align-self: center;
+    margin: 17.5% auto;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.btn__container {
+    position: absolute;
+    bottom: 0;
+    left: 17.5%;
+    display: flex;
+    justify-content: space-around;
+    flex: 10;
+    width: 60%;
+    margin: 5rem 0 3rem 0;
+}
+
+.btn {
+    cursor: pointer;
+    border-radius: 12px;
+    text-align: center;
+    border: none;
+    padding: 20px;
+    margin: 4px 2px;
+    font-size: 16px;
+}
