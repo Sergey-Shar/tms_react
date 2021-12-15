@@ -1,78 +1,77 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
+import React, { useState } from "react";
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import './index.css';
+import Popup from "../Popup";
+import { useHistory } from "react-router-dom";
 
-const Login = () => {
 
-    const [phone, setPhone] = useState('')
+const Login = (props) => {
+
+    const [email, setEmail] = useState('')
     const [password, setPasword] = useState('')
-    const [error, setError] = useState('')
-    const [user, setUser] = useState({})
+    const [err, setErr] = useState('')
+    const [regestration, setRegestration] = useState(false)
 
-    const fullName = user._id ? `${user.name.first}
-    ${user.name.last}` : '';
+    const history = useHistory()
 
-    const onSubmit = async () => {
-        try {
-            const response = await axios.post('http://localhost:3001/auth/sing-in', {
-                phone,
-                password,
+    const onInLogin = (email, password) => {
+        const auth = getAuth();
+        signInWithEmailAndPassword(auth, email, password)
+            .then((userCredential) => {
+                const user = userCredential.user
+                history.push('/post')
             })
-            setUser(response.data)
-
-        } catch (err) {
-            setError(err.response.data)
-        }
+            .catch((error) => {
+                const errorCode = error.code
+                setErr('Пользователь не найден. Вам необходимо зарегестрироваться.')
+            })
     }
 
-    useEffect(() => {
-        if (password.length === 3) {
-            onSubmit()
-        }
-    }, [password])
-
-    useEffect(() => {
-        if (
-            phone.length === 13 &&
-            !/(^\+)(375)(29|25|17|33|44)([0-9]{7})/.test(phone)
-            &&
-            !error
-        ) {
-            setError('Номер телефона введен некорректно')
-        }
-    }, [phone, error])
-
-    const onChangePassword = (event) => {
-        setPasword(event.target.value)
+    const openForm = () => {
+        setRegestration(true)
     }
 
-    const onReset = () => {
-        setPasword('')
-        setPhone('')
+    const closeForm = () => {
+        setRegestration(false)
+    }
+
+    const onChange = (event) => {
+        const { dataset, value } = event.target
+        if (dataset.input === email) {
+            setEmail(value)
+        }
+        if (dataset.input === password) {
+            setPasword(value)
+        }
     }
 
     return (
-        <div className="page">
-            <div className="form">
-            <input type='text'
-                onChange={(event) => setPhone(event.target.value)}
-                placeholder="phone"
-                value={phone} />
-
-            <input type='text'
-                onChange={onChangePassword}
-                placeholder="password"
-                value={password} />
+        <>
+            <div className="page">
+                <div className="greeting">
+                    <h1 className="geeting__title">facebook</h1>
+                    <p className="greeting__subtitle">Facebook помогает вам всегда оставаться на связи
+                        и общаться со своими знакомыми.</p>
+                </div>
+                <div className="form">
+                    <input type='text'
+                        onChange={onChange}
+                        placeholder="Электронный адрес или номер телефона"
+                        data-input="email"
+                        value={email} />
+                    <input type='password'
+                        onChange={onChange}
+                        placeholder="Пароль"
+                        data-input="password"
+                        value={password} />
+                    <button className="btn-log_in" onClick={() => onInLogin(email, password)}>Вход</button>
+                    <p className="password">забыли пароль?</p>
+                    <button className="btn-regestration" onClick={openForm}>Создать новый аккаунт</button>
+                    <p className="error">{err}</p>
+                </div>
             </div>
-          
-            <div className="hello">
-                Hello,{fullName}
-            </div>
-            <div className="error">
-                {error}
-            </div>
-            <button className="btn-reset" onClick={onReset}>Reset</button>
-        </div>
+            <Popup className={regestration} onClose={closeForm} />
+        </>
     )
 }
 
