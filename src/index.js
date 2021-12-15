@@ -1,11 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Login from './components/Login'
+import Navigation from './navigation';
+import   './firebase';
 
 ReactDOM.render(
   <React.StrictMode>
-  <Login/>
+  <Navigation/>
   </React.StrictMode>,
   document.getElementById('root')
 );
