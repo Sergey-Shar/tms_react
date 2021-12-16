@@ -2,12 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 //import Navigation from './navigation';
-import Sauces from './components/Sauces';
+import UsersNames from './components/Names';
 import   './firebase';
 
 ReactDOM.render(
   <React.StrictMode>
-   <Sauces/>
+   <UsersNames/>
   </React.StrictMode>,
   document.getElementById('root')
 );
