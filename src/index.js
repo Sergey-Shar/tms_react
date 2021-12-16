@@ -1,12 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Navigation from './navigation';
+//import Navigation from './navigation';
+import Sauces from './components/Sauces';
 import   './firebase';
 
 ReactDOM.render(
   <React.StrictMode>
-  <Navigation/>
+   <Sauces/>
   </React.StrictMode>,
   document.getElementById('root')
 );
