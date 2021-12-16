@@ -1,0 +1,54 @@
+.sauces{
+    position: relative;;
+    display: flex;
+    justify-content: space-around;
+    margin: 15rem auto;
+}
+
+.btn-confirm {
+    position: absolute;
+    top: 6rem;
+    right: 5rem;
+    padding: 1rem;
+    width: 15rem;
+    font-size: 25px;
+    font-weight: 800;
+    cursor: pointer;
+    background-color: rgb(255,82,0);
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+}
+
+.btn-confirm:hover{
+    background-color: rgb(66,183,41);
+}
+
+.total {
+    position: absolute;
+    top: 3rem;
+    right: 5rem;
+    font-size: 25px;
+}
+
+.title{
+    position: absolute;
+    left: 5rem;
+    top: -3rem;
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.btn-count{
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 20px;
+    font-weight: 900;
+    cursor: pointer;
+    border-radius: 10px;
+    border: none;
+}
+.count{
+    margin: 0 1rem 0 1rem;
+    font-size: 20px;
+}
