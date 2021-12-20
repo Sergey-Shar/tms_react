@@ -1,0 +1,32 @@
+.btn-category{
+    position: absolute;
+    right: 40%;
+    top: 10rem;
+    cursor: pointer;
+    width: 15rem;
+    height: 3rem;
+    font-size: 1.1rem;
+   
+}
+
+.list {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    right: 40%;
+    top: 13rem;
+    border: solid 1px;
+    width: 14.3rem;
+    list-style-type: none;
+    margin:0;
+    padding: 0 0 0 0.5rem;
+}
+
+.list li {
+    width: 100%;
+    padding: 0.5rem 0 0.5rem 0.3rem;
+}
+
+.active{
+    color: seagreen;
+}
