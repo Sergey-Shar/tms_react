@@ -2,12 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 //import Navigation from './navigation';
-import Sauces from './components/Sauces';
+import Construcnor from './components/Constructor';
 import   './firebase';
 
 ReactDOM.render(
   <React.StrictMode>
-   <Sauces/>
+   <Construcnor/>
   </React.StrictMode>,
   document.getElementById('root')
 );
