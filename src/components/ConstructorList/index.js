@@ -106,6 +106,7 @@ const onClose = () => {
                 checked={checked[index]}
                 onChecked={() => onChecked(index)}
                 title={title}
+                disabled={warning && !checked[index] }
                 />
                 </div>
                <div className="price">{price} Br</div>
@@ -118,7 +119,7 @@ const onClose = () => {
           <div className="total-price">{total}</div>
         </div>
       </ul>}
-      { warning &&  <Popup text={'Можно выбрать только пять категорий'} onClose={onClose}/>}
+      {/* { warning &&  <Popup text={'Можно выбрать только пять категорий'} onClose={onClose}/>} */}
     </>
   )
 }

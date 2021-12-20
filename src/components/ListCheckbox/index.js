@@ -1,12 +1,12 @@
 import React from "react";
 
-const Checkbox = ({ title, checked, onChecked }) => {
+const Checkbox = ({ title, checked, onChecked,disabled }) => {
 
     return (
         <>
         <input type='checkbox' value={title} checked={checked}
             onChange={onChecked}
-        //disabled={diseblet[index]}
+        disabled={disabled}
         />
          <label>{title}</label>
          </>
