@@ -15,12 +15,12 @@ const UsersNames = () => {
 
     return (
         <div className="container">
-            {people.map((name, index) => {
+            {people.map((name) => {
                 return (
-                    <div className="names" key={index}>{name}</div>
+                    <div className="names" key={name}>{name}</div>
                 )
             })}
-            <button onClick={addName}> Add random user</button>
+            <button onClick={addName}> Add random user </button>
         </div>
     )
 }
