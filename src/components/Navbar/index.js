@@ -25,17 +25,17 @@ const Navbar = () => {
     return (
         <div className="container">
             <div className="type">
-                {types.map((number, index) => {
+                {types.map((number) => {
                     return (
-                        <button key={index} 
+                        <button key={number} 
                         onClick={() => onIdChange(number)} >{number}</button>
                     )
                 })}
             </div>
             <div className="color">
-                {colors.map((color, index) => {
+                {colors.map((color) => {
                     return (
-                        <button key={index} 
+                        <button key={color} 
                         onClick={() => onColorChange(color)} >{color}</button>
                     )
                 })}
