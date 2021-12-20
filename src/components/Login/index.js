@@ -35,15 +35,6 @@ const Login = () => {
         setRegestration(false)
     }
 
-    // const onChangeEmail = (event) => {
-    //     setMail(event.target.value)
-    //     console.log(event.target.value)
-    //   }
-
-      const onChangePassword = (event) => {
-          setPasword(event.target.value)
-      }
-
     return (
         <>
             <div className="page">
