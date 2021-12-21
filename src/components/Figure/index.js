@@ -5,16 +5,11 @@ import "./index.css"
 const Figure = () => {
 
     const params = useParams()
-
-    const [figure, setFigure] = useState('')
-
-    useEffect(() => {
-        (params.id === '1') ? setFigure('squared') : setFigure('circle')
-    }, [params.id])
+    const { id, color } = params
 
     return (
-        <div className={figure} style={{ background: params.color }}>
-            <h3>{figure}</h3>
+        <div className={`figure${id}`} style={{ background: color }}>
+            {(id === '1') ? <h3>squared</h3> : <h3>circle</h3>}
         </div>
     )
 }
