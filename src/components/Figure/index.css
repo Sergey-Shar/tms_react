@@ -1,0 +1,21 @@
+.figure1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10rem;
+    width: 10rem;
+    background-color: seagreen;
+    margin: 5rem auto;
+    color: #fff;
+}
+
+.figure2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+    margin: 5rem auto;
+    color: #fff;
+}
