@@ -35,6 +35,13 @@ const Login = () => {
         setRegestration(false)
     }
 
+<<<<<<< HEAD
+=======
+      const onChangePassword = (event) => {
+          setPasword(event.target.value)
+      }
+
+>>>>>>> 7282eb9 ('Task is ready for review')
     return (
         <>
             <div className="page">
