@@ -3,11 +3,11 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import Navigation from './navigation';
 import   './firebase';
-import TimePicker from './components/TimePicker';
+import Input from "../src/components/Input"
 
 ReactDOM.render(
   <React.StrictMode>
-   <Navigation/>
+  <Input/>
   </React.StrictMode>,
   document.getElementById('root')
 );
