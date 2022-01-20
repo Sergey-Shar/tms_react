@@ -153,7 +153,7 @@ const countActiveUser = (users: User[]): number => {
 
 // Написать функцию которая принимает список всех пользователей и возвращает список тех, кому больше 18-ти лет
 
-const filterUserByAge = (users: User[]) => {
+const filterUserByAge = (users: User[]): object => {
     return users.filter((user) => user.age > 18)
 }
 
